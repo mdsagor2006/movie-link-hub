@@ -1,39 +1,44 @@
-# MovieLinkHub
+# BanglaMovieHub
 
-A modern movie and TV discovery website template built for legal streaming recommendations and revenue-ready affiliate placements.
+A premium, Bangladesh-inspired movie and TV discovery website built with HTML, CSS, and JavaScript.
 
-## Features
-- Cinematic landing page design
-- Search across movie titles, genres, and platforms
+## Included
+- Modern cinematic landing page
+- Search by title, genre, or platform
 - Genre filter pills
-- Trending and top-rated sections
-- Platform availability layout
-- Earnings / monetization section
-- Newsletter signup UI
-- Responsive layout for desktop and mobile
+- Trending and top-rated movie cards
+- Movie detail pages
+- About, FAQ, and Contact pages
+- Monetization-ready layout
+- Responsive design
 
 ## Files
-- `index.html` — complete site structure
-- `styles.css` — full styling and responsive design
-- `script.js` — movie data + filtering logic
+- `index.html`
+- `details.html`
+- `about.html`
+- `faq.html`
+- `contact.html`
+- `styles.css`
+- `script.js`
 
 ## Local preview
-Open `index.html` directly in a browser, or run:
+Run:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit: http://localhost:8000
+Then open:
 
-## Publish to GitHub Pages
-1. Push this repo to GitHub
-2. Open the repository settings
-3. Go to "Pages"
-4. Choose "Deploy from a branch"
-5. Select the `main` branch and `/` root folder
-6. Save
-7. Wait for the GitHub Pages URL to appear
+```text
+http://localhost:8000
+```
 
-## Legal note
-This project is focused on legal movie discovery, safe recommendations, and affiliate-ready monetization—without hosting or linking to pirated or unauthorized content.
+## Deployment
+You can publish this project on:
+- GitHub Pages
+- Vercel
+- Cloudflare Pages
+
+## Notes
+This project is a legal discovery and recommendation landing page for entertainment content. It is designed as a premium starter website and monetization-ready brand platform.

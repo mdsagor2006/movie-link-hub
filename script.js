@@ -8,7 +8,7 @@ const movies = [
     platform: "Prime Video",
     duration: "2h 46m",
     summary:
-      "Paul Atreides allies with the Fremen to bring down the oppressive empire and to protect his destiny across the desert world of Arrakis.",
+      "Paul Atreides allies with the Fremen to bring down the oppressive empire and protect his destiny across the desert world of Arrakis.",
     image:
       "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -25,13 +25,13 @@ const movies = [
     platform: "Max",
     duration: "2h 56m",
     summary:
-      "When a sadistic killer targets Gotham City, Batman must investigate corruption in the city while protecting the innocent.",
+      "When a sadistic killer targets Gotham City, Batman must investigate corruption while protecting the innocent.",
     image:
       "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=80",
     backdrop:
       "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1600&q=80",
     link: "https://www.max.com/",
-    tags: ["Dark", "Thriller", "Crime"]
+    tags: ["Dark", "Mystery", "Crime"]
   },
   {
     id: "everything-everywhere",
@@ -42,7 +42,7 @@ const movies = [
     platform: "Netflix",
     duration: "2h 19m",
     summary:
-      "A laundromat owner is forced to connect with alternate versions of herself to save existence, leading to a surreal and emotional adventure.",
+      "A laundromat owner learns to connect with alternate versions of herself to save existence in a surreal, emotional adventure.",
     image:
       "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -59,7 +59,7 @@ const movies = [
     platform: "Netflix",
     duration: "2h 20m",
     summary:
-      "Miles Morales crosses dimensions and faces a new threat while learning what it means to be a hero in a multiverse of stories.",
+      "Miles Morales crosses dimensions as he learns what it means to become a hero in a universe full of possibilities.",
     image:
       "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -76,13 +76,13 @@ const movies = [
     platform: "Apple TV",
     duration: "1h 56m",
     summary:
-      "A linguist is recruited to help communicate with an alien species whose mysterious arrival on Earth threatens humanity's future.",
+      "A linguist is recruited to help communicate with an alien species whose arrival on Earth changes humanity forever.",
     image:
       "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=900&q=80",
     backdrop:
       "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1600&q=80",
     link: "https://tv.apple.com/",
-    tags: ["Mind-bending", "Drama", "Sci-Fi"]
+    tags: ["Drama", "Mystery", "Sci-Fi"]
   },
   {
     id: "no-time-to-die",
@@ -93,7 +93,7 @@ const movies = [
     platform: "Netflix",
     duration: "2h 43m",
     summary:
-      "James Bond is drawn out of retirement for a final mission that tests his loyalty, love, and courage.",
+      "James Bond is forced out of retirement for a final mission that tests his loyalty, love, and courage.",
     image:
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -110,7 +110,7 @@ const movies = [
     platform: "Prime Video",
     duration: "2h 49m",
     summary:
-      "A former pilot joins a mission beyond the stars to find a new home for humanity in a desperate search across the cosmos.",
+      "A former pilot joins a mission beyond the stars to find a new home for humanity in the farthest reaches of space.",
     image:
       "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -127,7 +127,7 @@ const movies = [
     platform: "Mubi",
     duration: "1h 39m",
     summary:
-      "A legendary concierge and his protégé navigate a world of mystery, murder, art theft, and old-world glamour.",
+      "A legendary concierge and his protégé navigate a world of mystery, murder, and old-world glamour.",
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -144,7 +144,7 @@ const movies = [
     platform: "Prime Video",
     duration: "2h 0m",
     summary:
-      "Max and Furiosa embark on a brutal chase through the desert as they fight for freedom, survival, and a future without tyranny.",
+      "Max and Furiosa race across the desert to outrun a tyrant and reclaim freedom in a brutal, unforgettable chase.",
     image:
       "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -161,7 +161,7 @@ const movies = [
     platform: "Disney+",
     duration: "3h 12m",
     summary:
-      "Jake Sully and Neytiri face new threats as their family navigates a deeper connection to Pandora and a shifting world.",
+      "Jake Sully and Neytiri face new threats as their family navigates a deeper connection to Pandora.",
     image:
       "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -178,7 +178,7 @@ const movies = [
     platform: "Netflix",
     duration: "2h 0m",
     summary:
-      "A brilliant young entrepreneur launches a social network that reshapes connections, power, and ambition across the digital age.",
+      "A brilliant young entrepreneur launches a social network that reshapes power, ambition, and connection in a digital age.",
     image:
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -195,7 +195,7 @@ const movies = [
     platform: "Disney+",
     duration: "1h 35m",
     summary:
-      "Inside Riley's mind, emotions guide her through a major life change and a journey toward self-discovery and balance.",
+      "Inside Riley's mind, emotions guide her through a major life change and a journey toward balance and confidence.",
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
     backdrop:
@@ -208,9 +208,9 @@ const movies = [
 const trendingGrid = document.getElementById("trendingGrid");
 const topRatedGrid = document.getElementById("topRatedGrid");
 const genreGrid = document.getElementById("genreGrid");
+const detailRoot = document.getElementById("detailRoot");
 const globalSearch = document.getElementById("globalSearch");
 const genrePills = document.querySelectorAll(".genre-pill");
-const detailRoot = document.getElementById("detailRoot");
 
 let activeGenre = "all";
 
@@ -322,10 +322,7 @@ function renderMovieDetail() {
                 <span class="badge">${selectedMovie.year}</span>
                 <span class="badge">${selectedMovie.duration}</span>
               </div>
-
-              <div class="detail-tools">
-                <span class="detail-rating">★ ${selectedMovie.rating}</span>
-              </div>
+              <span class="detail-rating">★ ${selectedMovie.rating}</span>
             </div>
 
             <div class="detail-grid">
