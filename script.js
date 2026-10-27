@@ -14,7 +14,7 @@ const movies = [
     year: 2022,
     genre: "Action",
     rating: 8.3,
-    platform: "HBO Max",
+    platform: "Max",
     image:
       "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=80",
     link: "https://www.max.com/"
@@ -30,7 +30,7 @@ const movies = [
     link: "https://www.netflix.com/"
   },
   {
-    title: "Spider-Man: Across the Spider-Verse",
+    title: "Spider-Verse",
     year: 2023,
     genre: "Animation",
     rating: 8.6,
@@ -78,34 +78,61 @@ const movies = [
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
     link: "https://mubi.com/"
+  },
+  {
+    title: "Mad Max: Fury Road",
+    year: 2015,
+    genre: "Action",
+    rating: 8.1,
+    platform: "Prime Video",
+    image:
+      "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?auto=format&fit=crop&w=900&q=80",
+    link: "https://www.primevideo.com/"
+  },
+  {
+    title: "Avatar: The Way of Water",
+    year: 2022,
+    genre: "Adventure",
+    rating: 7.6,
+    platform: "Disney+",
+    image:
+      "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=900&q=80",
+    link: "https://www.disneyplus.com/"
+  },
+  {
+    title: "The Social Network",
+    year: 2010,
+    genre: "Drama",
+    rating: 7.8,
+    platform: "Netflix",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    link: "https://www.netflix.com/"
+  },
+  {
+    title: "Inside Out",
+    year: 2015,
+    genre: "Animation",
+    rating: 8.2,
+    platform: "Disney+",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    link: "https://www.disneyplus.com/"
   }
 ];
 
-const movieGrid = document.getElementById("movieGrid");
-const genreFilter = document.getElementById("genreFilter");
-const movieSearch = document.getElementById("movieSearch");
+const trendingGrid = document.getElementById("trendingGrid");
+const topRatedGrid = document.getElementById("topRatedGrid");
+const genreGrid = document.getElementById("genreGrid");
+const globalSearch = document.getElementById("globalSearch");
 const genrePills = document.querySelectorAll(".genre-pill");
-
-const uniqueGenres = [...new Set(movies.map((movie) => movie.genre))];
-
-uniqueGenres.forEach((genre) => {
-  const option = document.createElement("option");
-  option.value = genre;
-  option.textContent = genre;
-  genreFilter.appendChild(option);
-});
 
 let activeGenre = "all";
 
-function renderMovies(list) {
-  movieGrid.innerHTML = "";
-
-  list.forEach((movie) => {
-    const card = document.createElement("article");
-    card.className = "movie-card";
-
-    card.innerHTML = `
-      <div class="card-image" style="background-image: linear-gradient(180deg, rgba(8,13,19,0.08), rgba(8,13,19,0.72)), url('${movie.image}');">
+function createCard(movie) {
+  return `
+    <article class="movie-card">
+      <div class="card-image" style="background-image: linear-gradient(180deg, rgba(10,15,23,0.1), rgba(10,15,23,0.70)), url('${movie.image}');">
         <span class="card-badge">${movie.platform}</span>
       </div>
       <div class="card-body">
@@ -122,16 +149,18 @@ function renderMovies(list) {
           <a class="watch-btn" href="${movie.link}" target="_blank" rel="noreferrer">Open</a>
         </div>
       </div>
-    `;
-
-    movieGrid.appendChild(card);
-  });
+    </article>
+  `;
 }
 
-function applyFilters() {
-  const query = movieSearch.value.trim().toLowerCase();
+function renderMovies(container, list) {
+  container.innerHTML = list.map((movie) => createCard(movie)).join("");
+}
 
-  const filtered = movies.filter((movie) => {
+function getFilteredMovies() {
+  const query = globalSearch.value.trim().toLowerCase();
+
+  return movies.filter((movie) => {
     const matchesGenre = activeGenre === "all" || movie.genre === activeGenre;
     const matchesSearch =
       !query ||
@@ -141,24 +170,34 @@ function applyFilters() {
 
     return matchesGenre && matchesSearch;
   });
-
-  renderMovies(filtered);
 }
 
-movieSearch.addEventListener("input", applyFilters);
-genreFilter.addEventListener("change", (event) => {
-  activeGenre = event.target.value;
-  applyFilters();
-});
+function refreshMovies() {
+  const filtered = getFilteredMovies();
+  const trendingList = filtered.slice(0, 4);
+  const topRatedList = [...filtered].sort((a, b) => b.rating - a.rating).slice(0, 4);
+
+  renderMovies(trendingGrid, trendingList);
+  renderMovies(topRatedGrid, topRatedList);
+  renderMovies(genreGrid, filtered.slice(0, 8));
+}
+
+globalSearch.addEventListener("input", refreshMovies);
 
 genrePills.forEach((pill) => {
   pill.addEventListener("click", () => {
-    genrePills.forEach((item) => item.classList.remove("active"));
-    pill.classList.add("active");
     activeGenre = pill.dataset.genre;
-    genreFilter.value = activeGenre;
-    applyFilters();
+    genrePills.forEach((item) => item.classList.toggle("active", item === pill));
+    refreshMovies();
   });
 });
 
-renderMovies(movies);
+refreshMovies();
+
+const newsletterForm = document.querySelector(".newsletter-form");
+newsletterForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const button = newsletterForm.querySelector("button");
+  button.textContent = "Joined!";
+  button.disabled = true;
+});

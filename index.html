@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="MovieLinkHub helps you discover trending movies, TV shows, and legal streaming options in one place."
+      content="MovieLinkHub is a modern movie and TV discovery portal with legal streaming info, trending titles, and affiliate-ready monetization."
     />
-    <title>MovieLinkHub | Discover Movies & TV</title>
+    <title>MovieLinkHub | Movie & TV Discover</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,150 +17,213 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="container nav">
-        <div class="brand">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="MovieLinkHub home">
           <span class="brand-mark">M</span>
           <span>MovieLinkHub</span>
-        </div>
-        <nav>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#trending">Trending</a>
+          <a href="#top-rated">Top Rated</a>
           <a href="#genres">Genres</a>
-          <a href="#earn">Earn</a>
+          <a href="#monetize">Monetize</a>
         </nav>
-        <a class="nav-cta" href="#trending">Explore</a>
+
+        <a class="header-btn" href="#trending">Explore</a>
       </div>
     </header>
 
     <main>
       <section class="hero" id="home">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow">New releases and classics</span>
-            <h1>Find your next movie night in minutes.</h1>
+          <div class="hero-content">
+            <span class="eyebrow">Legal streaming & movie discovery</span>
+            <h1>Your next binge starts here.</h1>
             <p>
-              Browse trending movies, discover legal streaming availability,
-              and explore curated picks across action, drama, animation,
-              and more.
+              Discover trending movies, top-rated TV shows, and legal streaming options
+              across Netflix, Prime Video, Apple TV, Max, and more.
             </p>
-            <div class="hero-actions">
-              <a class="primary-btn" href="#trending">Browse Movies</a>
-              <a class="secondary-btn" href="#earn">Monetize</a>
+
+            <div class="hero-search">
+              <input
+                id="globalSearch"
+                type="text"
+                placeholder="Search movies, TV shows, genres, or platforms..."
+              />
+              <button type="button">Search</button>
             </div>
-            <ul class="stats">
-              <li><strong>12k+</strong><span>Titles</span></li>
-              <li><strong>48+</strong><span>Genres</span></li>
-              <li><strong>4.9/5</strong><span>User rating</span></li>
-            </ul>
+
+            <div class="hero-stats">
+              <div>
+                <strong>12k+</strong>
+                <span>Titles</span>
+              </div>
+              <div>
+                <strong>48+</strong>
+                <span>Genres</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>Reader rating</span>
+              </div>
+            </div>
           </div>
 
-          <div class="hero-visual">
-            <div class="poster-stack">
-              <div class="poster poster-main">
+          <div class="hero-visual" aria-label="Featured posters">
+            <div class="poster-scene">
+              <div class="poster poster-large">
                 <div class="poster-overlay">
                   <span>Featured release</span>
                   <h3>Silent Horizon</h3>
                   <small>Drama • 2025</small>
                 </div>
               </div>
-              <div class="poster poster-small top"></div>
-              <div class="poster poster-small bottom"></div>
+              <div class="poster poster-mini mini-one"></div>
+              <div class="poster poster-mini mini-two"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="search-wrap">
-        <div class="container search-box">
-          <div class="input-group">
-            <label for="movieSearch">Search by title or genre</label>
-            <input id="movieSearch" type="text" placeholder="Search movies, TV shows, genres..." />
-          </div>
-          <div class="select-group">
-            <label for="genreFilter">Filter</label>
-            <select id="genreFilter">
-              <option value="all">All genres</option>
-            </select>
-          </div>
+      <section class="section trust-strip">
+        <div class="container trust-grid">
+          <div>Netflix</div>
+          <div>Prime Video</div>
+          <div>Apple TV+</div>
+          <div>Max</div>
+          <div>Disney+</div>
+          <div>Hulu</div>
         </div>
       </section>
 
       <section class="section" id="trending">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-head">
             <div>
               <span class="eyebrow dark">Trending now</span>
               <h2>Popular picks</h2>
             </div>
-            <a href="#" class="link-btn">View all</a>
+            <a href="#" class="inline-link">View all</a>
           </div>
-          <div class="movie-grid" id="movieGrid"></div>
+
+          <div id="trendingGrid" class="movie-grid"></div>
         </div>
       </section>
 
-      <section class="section alt" id="genres">
+      <section class="section alt" id="top-rated">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-head">
             <div>
-              <span class="eyebrow dark">Browse by mood</span>
-              <h2>Top genres</h2>
+              <span class="eyebrow dark">Critics' choice</span>
+              <h2>Top rated this week</h2>
             </div>
           </div>
-          <div class="genre-row">
+
+          <div id="topRatedGrid" class="movie-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="genres">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Browse by mood</span>
+              <h2>Genres</h2>
+            </div>
+          </div>
+
+          <div class="genre-filter-row">
             <button class="genre-pill active" data-genre="all">All</button>
             <button class="genre-pill" data-genre="Action">Action</button>
-            <button class="genre-pill" data-genre="Sci-Fi">Sci-Fi</button>
             <button class="genre-pill" data-genre="Drama">Drama</button>
+            <button class="genre-pill" data-genre="Sci-Fi">Sci-Fi</button>
             <button class="genre-pill" data-genre="Comedy">Comedy</button>
             <button class="genre-pill" data-genre="Animation">Animation</button>
             <button class="genre-pill" data-genre="Thriller">Thriller</button>
+            <button class="genre-pill" data-genre="Adventure">Adventure</button>
+          </div>
+
+          <div id="genreGrid" class="movie-grid genre-grid"></div>
+        </div>
+      </section>
+
+      <section class="section partner-section">
+        <div class="container partner-layout">
+          <div class="partner-copy">
+            <span class="eyebrow dark">Streaming guide</span>
+            <h2>Find what’s available now.</h2>
+            <p>
+              We help users discover where a movie or show is available, whether it is on a
+              subscription service, rental, or free platform.
+            </p>
+          </div>
+
+          <div class="platform-list">
+            <div class="platform-item"><span>Netflix</span><b>Popular</b></div>
+            <div class="platform-item"><span>Prime Video</span><b>Trending</b></div>
+            <div class="platform-item"><span>Apple TV+</span><b>New</b></div>
+            <div class="platform-item"><span>Max</span><b>Premium</b></div>
           </div>
         </div>
       </section>
 
-      <section class="section earn" id="earn">
-        <div class="container earn-box">
-          <div class="earn-copy">
-            <span class="eyebrow dark">Income ready</span>
-            <h2>Turn your movie platform into a revenue engine.</h2>
+      <section class="section monetise" id="monetize">
+        <div class="container monetize-grid">
+          <div class="monetize-copy">
+            <span class="eyebrow dark">Monetize safely</span>
+            <h2>Build a movie portal that earns legally.</h2>
             <p>
-              Add affiliate links to legal streaming and ticketing platforms,
-              showcase sponsored picks, or monetize with a newsletter and curated lists.
+              Use affiliate links, banner placements, sponsored reviews, and lead generation to
+              turn your movie website into a revenue-ready brand.
             </p>
             <ul>
-              <li>Affiliate streaming recommendations</li>
-              <li>Movie deal and promo placements</li>
-              <li>Newsletter & email subscriber conversion</li>
+              <li>Affiliate video streaming recommendations</li>
+              <li>Movie deal and ticketing promos</li>
+              <li>Newsletter subscriber conversion</li>
             </ul>
           </div>
-          <div class="earn-card">
-            <div class="mini-metric">
+
+          <div class="monetize-card">
+            <div class="metric-box">
               <span>Avg. CTR</span>
               <strong>4.8%</strong>
             </div>
-            <div class="mini-metric">
+            <div class="metric-box">
               <span>Revenue model</span>
               <strong>Affiliate</strong>
             </div>
-            <div class="mini-metric">
-              <span>Monetization</span>
-              <strong>Legal & compliant</strong>
+            <div class="metric-box">
+              <span>Approach</span>
+              <strong>Compliant</strong>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section newsletter">
+        <div class="container newsletter-box">
+          <div>
+            <span class="eyebrow dark">Stay updated</span>
+            <h2>Get fresh movie picks every week.</h2>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Join Free</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <div>
-          <div class="brand footer-brand">
-            <span class="brand-mark">M</span>
-            <span>MovieLinkHub</span>
-          </div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">M</span>
+          <span>MovieLinkHub</span>
         </div>
-        <p>© 2025 MovieLinkHub. Discover, stream, and enjoy legally.</p>
+        <p>© 2025 MovieLinkHub. Discover legally.</p>
       </div>
     </footer>
 

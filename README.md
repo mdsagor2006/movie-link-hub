@@ -1,36 +1,39 @@
 # MovieLinkHub
 
-A clean movie and TV discovery website template designed for legal streaming recommendations, curated lists, and affiliate-ready monetization.
+A modern movie and TV discovery website template built for legal streaming recommendations and revenue-ready affiliate placements.
 
 ## Features
-- Responsive homepage hero section
-- Search by movie title, genre, or platform
-- Genre filter and category pills
-- Trending movie cards
-- Monetization / affiliate-ready layout
-- Fully static and easy to deploy on GitHub Pages
+- Cinematic landing page design
+- Search across movie titles, genres, and platforms
+- Genre filter pills
+- Trending and top-rated sections
+- Platform availability layout
+- Earnings / monetization section
+- Newsletter signup UI
+- Responsive layout for desktop and mobile
 
 ## Files
-- `index.html` — main page structure
-- `styles.css` — all styles and responsive layout
-- `script.js` — searchable movie data and filtering logic
+- `index.html` — complete site structure
+- `styles.css` — full styling and responsive design
+- `script.js` — movie data + filtering logic
 
 ## Local preview
-Open `index.html` directly in a browser, or run a lightweight local server:
+Open `index.html` directly in a browser, or run:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open: http://localhost:8000
+Then visit: http://localhost:8000
 
-## Publish on GitHub Pages
-1. Push this repository to GitHub.
-2. Open the repository settings.
-3. Go to Pages.
-4. Under "Build and deployment", select "Deploy from a branch".
-5. Choose the `main` branch and root `/` folder.
-6. Save and wait for the site to publish.
+## Publish to GitHub Pages
+1. Push this repo to GitHub
+2. Open the repository settings
+3. Go to "Pages"
+4. Choose "Deploy from a branch"
+5. Select the `main` branch and `/` root folder
+6. Save
+7. Wait for the GitHub Pages URL to appear
 
-## Notes
-This project is intentionally designed as a legal movie discovery and affiliate-friendly starter website. It does not include pirated or unauthorized streaming content.
+## Legal note
+This project is focused on legal movie discovery, safe recommendations, and affiliate-ready monetization—without hosting or linking to pirated or unauthorized content.
