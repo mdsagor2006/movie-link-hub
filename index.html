@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MovieLinkHub helps you discover trending movies, TV shows, and legal streaming options in one place."
+    />
+    <title>MovieLinkHub | Discover Movies & TV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">M</span>
+          <span>MovieLinkHub</span>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#trending">Trending</a>
+          <a href="#genres">Genres</a>
+          <a href="#earn">Earn</a>
+        </nav>
+        <a class="nav-cta" href="#trending">Explore</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">New releases and classics</span>
+            <h1>Find your next movie night in minutes.</h1>
+            <p>
+              Browse trending movies, discover legal streaming availability,
+              and explore curated picks across action, drama, animation,
+              and more.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="#trending">Browse Movies</a>
+              <a class="secondary-btn" href="#earn">Monetize</a>
+            </div>
+            <ul class="stats">
+              <li><strong>12k+</strong><span>Titles</span></li>
+              <li><strong>48+</strong><span>Genres</span></li>
+              <li><strong>4.9/5</strong><span>User rating</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="poster-stack">
+              <div class="poster poster-main">
+                <div class="poster-overlay">
+                  <span>Featured release</span>
+                  <h3>Silent Horizon</h3>
+                  <small>Drama • 2025</small>
+                </div>
+              </div>
+              <div class="poster poster-small top"></div>
+              <div class="poster poster-small bottom"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-wrap">
+        <div class="container search-box">
+          <div class="input-group">
+            <label for="movieSearch">Search by title or genre</label>
+            <input id="movieSearch" type="text" placeholder="Search movies, TV shows, genres..." />
+          </div>
+          <div class="select-group">
+            <label for="genreFilter">Filter</label>
+            <select id="genreFilter">
+              <option value="all">All genres</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trending">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow dark">Trending now</span>
+              <h2>Popular picks</h2>
+            </div>
+            <a href="#" class="link-btn">View all</a>
+          </div>
+          <div class="movie-grid" id="movieGrid"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="genres">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow dark">Browse by mood</span>
+              <h2>Top genres</h2>
+            </div>
+          </div>
+          <div class="genre-row">
+            <button class="genre-pill active" data-genre="all">All</button>
+            <button class="genre-pill" data-genre="Action">Action</button>
+            <button class="genre-pill" data-genre="Sci-Fi">Sci-Fi</button>
+            <button class="genre-pill" data-genre="Drama">Drama</button>
+            <button class="genre-pill" data-genre="Comedy">Comedy</button>
+            <button class="genre-pill" data-genre="Animation">Animation</button>
+            <button class="genre-pill" data-genre="Thriller">Thriller</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section earn" id="earn">
+        <div class="container earn-box">
+          <div class="earn-copy">
+            <span class="eyebrow dark">Income ready</span>
+            <h2>Turn your movie platform into a revenue engine.</h2>
+            <p>
+              Add affiliate links to legal streaming and ticketing platforms,
+              showcase sponsored picks, or monetize with a newsletter and curated lists.
+            </p>
+            <ul>
+              <li>Affiliate streaming recommendations</li>
+              <li>Movie deal and promo placements</li>
+              <li>Newsletter & email subscriber conversion</li>
+            </ul>
+          </div>
+          <div class="earn-card">
+            <div class="mini-metric">
+              <span>Avg. CTR</span>
+              <strong>4.8%</strong>
+            </div>
+            <div class="mini-metric">
+              <span>Revenue model</span>
+              <strong>Affiliate</strong>
+            </div>
+            <div class="mini-metric">
+              <span>Monetization</span>
+              <strong>Legal & compliant</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark">M</span>
+            <span>MovieLinkHub</span>
+          </div>
+        </div>
+        <p>© 2025 MovieLinkHub. Discover, stream, and enjoy legally.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
